@@ -18,7 +18,6 @@ permalink: /about/
 - 👀 I’m interested in {Mathematics, Physics, Theoretical Computer Science, Programming, Problem solving} & anything related
 
 # Links
-[![iahmadgad.github.io](https://img.shields.io/badge/iahmadgad.github.io-black?style=flat-square&logo=GitHub)](https://iahmadgad.github.io/)
 [![Reddit](https://img.shields.io/badge/Reddit-black?style=flat-square&logo=Reddit)](https://www.reddit.com/user/iAhmadGad)
 [![Discord](https://img.shields.io/badge/Discord-black?style=flat-square&logo=Discord)](https://discord.com/users/580785454782218270)
 [![Github Gist](https://img.shields.io/badge/Github_Gist-black?style=flat-square&logo=Github)](https://gist.github.com/iAhmadGad)
