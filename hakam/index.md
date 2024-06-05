@@ -3,24 +3,24 @@ layout: page
 title: Hakam (Problem solving judge)
 ---
 
-# Hakam (Problem solving judge)
+[![Github repository](https://img.shields.io/badge/Github_repository-black?style=flat-square&logo=GitHub)](https://github.com/iahmadgad/hakam)
 
-## Why Hakam?
+# Why Hakam?
 
 As a problem solver, sometimes you might have slow internet, and waiting until your submission get tested might take longer than expected, you might even refresh your page a lot of times.
 
 so why not testing your solution locally before you submit it?
 
-## What does "Hakam" mean?
+# What does "Hakam" mean?
 
 **Hakam**'s name derives from **"حَكَم"** which is an arabic word means judge, and it is pronounced as **/ħakam/**.
 but since there is no /ħ/ sound in english i just _latinised_ the name as **"Hakam"**.
 
-## What languages does Hakam support?
+# What languages does Hakam support?
 
 Any language that supports `stdin` & `stdout`.
 
-## Install
+# Install
 
 - Prerequisites:
   - Make
@@ -32,7 +32,7 @@ Any language that supports `stdin` & `stdout`.
 git clone --depth 1 https://github.com/iahmadgad/hakam.git && cd hakam && make install
 ```
 
-## Test File
+# Test File
 
 Test file is a json file Hakam uses to compile، execute, and then test your solution code.
 
@@ -56,7 +56,7 @@ Here is an example of a test file:
 
 - `tests` is an array of 2-element arrays, where each [0] index of them is the input and the [1] index is the expected output, i.e. the right answer. **it is required.**
 
-## Usage
+# Usage
 
 ```bash
 hakam <command> [candidate] [option]
