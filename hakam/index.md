@@ -1,3 +1,8 @@
+---
+layout: page
+title: Hakam (Problem solving judge)
+---
+
 # Hakam (Problem solving judge)
 
 ## Why Hakam?
