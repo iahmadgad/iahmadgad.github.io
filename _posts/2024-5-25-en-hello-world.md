@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  "Hello World!"
-permalink: /blog/0en/
+title: Hello World!
 ---
 
 The first blog post.
