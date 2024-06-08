@@ -2,30 +2,30 @@
 layout: page
 title: Hakam (Problem solving judge)
 permalink: /projects/hakam/
-exclude: "true"
 ---
 
 [![Github repository](https://img.shields.io/badge/Github_repository-black?style=flat-square&logo=GitHub)](https://github.com/iahmadgad/hakam)
 
-# Why Hakam?
+## Why Hakam?
 
 As a problem solver, sometimes you might have slow internet, and waiting until your submission get tested might take longer than expected, you might even refresh your page a lot of times.
 
 so why not testing your solution locally before you submit it?
 
-# What does "Hakam" mean?
+## What does "Hakam" mean?
 
 **Hakam**'s name derives from **"حَكَم"** which is an arabic word means judge, and it is pronounced as **/ħakam/**.
 but since there is no /ħ/ sound in english i just _latinised_ the name as **"Hakam"**.
 
-# What languages does Hakam support?
+## What languages does Hakam support?
 
 Any language that supports `stdin` & `stdout`.
 
-# Install
+## Install
 
 - Prerequisites:
   - Make
+  - Python
   - PyInstaller
   - Python multiline module
   - In order to perform tests you should have the compiler or the interpreter of your language installed
@@ -34,7 +34,7 @@ Any language that supports `stdin` & `stdout`.
 git clone --depth 1 https://github.com/iahmadgad/hakam.git && cd hakam && make install
 ```
 
-# Test File
+## Test File
 
 Test file is a json file Hakam uses to compile، execute, and then test your solution code.
 
@@ -42,12 +42,12 @@ Here is an example of a test file:
 
 ```json
 {
-   "compile": "g++ solution.cpp"
-   ,"execute": "./a.out"
-   ,"tests":
+   "compile": "g++ solution.cpp",
+   "execute": "./a.out",
+   "tests":
    [
-       ["8", "YES"]
-       ,["5", "NO"]
+       ["8", "YES"],
+       ["5", "NO"]
    ]
 }
 
@@ -58,63 +58,86 @@ Here is an example of a test file:
 
 - `tests` is an array of 2-element arrays, where each [0] index of them is the input and the [1] index is the expected output, i.e. the right answer. **it is required.**
 
-# Usage
+## Usage
 
 ```bash
-hakam <command> [candidate] [option]
+hakam [-h, --help] {new,test} ...
 ```
 
-### `help`
+### [`-h, --help`]
 
-prints Usage
+prints usage
 
-### `new [testfile]` 
+### `new [testfile]`
 
-- `[testfile]`: if given, a file will be created with name `[testfile]`, otherwise the name will be literally `testfile.json`.
+- `[testfile]`: create file named `[testfile]`, if not given create file named literally `testfile.json`.
 
 The file will be written as follows:
 
 ```json
 {
     "compile": ""
-    ,"execute": ""
-    ,"tests":
+    "execute": "",
+    "tests":,
     [
+        ["", ""],
         ["", ""]
-	,["", ""]
     ]
 }
 ```
 
-### `test [testfile] [--strict]`
+### `test [testfile]` [-s, --strict] [-v, --verbose]
 
-- `[testfile]`: if given, the file with name `[testfile]` will be tested, otherwise the file with name `testfile.json` will be tested.
-- `[--strict]`: if chosen Hakam will exit if your code answered wrong or if runtime error is thrown.
+- `[testfile]`: test file named `[testfile]` will, if not given test file named `testfile.json`.
+- `[-s, --strict]`: exit if code answered wrong or if runtime error is thrown.
+- `[-v, --verbose]` print tests & results.
 
-Output should be something like this:
-```
+## Examples:
+
+```bash
+$ hakam test
 Compiling...
-Executing...
-0: Test Passed :)
+Testing...
+Passed: 2
+Wrong answers: 1
+```
+with `--verbose`:
+```bash
+$ hakam test --verbose
+Compiling...
+Testing...
 1: Test Passed :)
-2: Wrong Answer :^)
+2: Test Passed :)
+3: Wrong Answer :^)
 expected NO for input 2 not YES
 Passed: 2
 Wrong answers: 1
 ```
+
 In case your code passed all the tests output should be something like this:
-```
+```bash
+$ hakam test
 Compiling...
-Executing...
-0: Test Passed :)
-1: Test Passed :)
-2: Test Passed :)
+Testing...
 Accepted
 ```
-In case your code answered wrong and you chose `--strict` option, Hakam won't proceed to perform tests, and output should be something like this:
-```
+
+with `--verbose`:
+```bash
+$ hakam test --verbose
 Compiling...
-Executing...
-0: Wrong Answer :^)
+Testing...
+1: Test Passed :)
+2: Test Passed :)
+3: Test Passed :)
+Accepted
+```
+
+In case your code answered wrong and you chose `--strict` option, Hakam won't proceed to perform tests, and output should be something like this:
+```bash
+hakam test --strict
+Compiling...
+Testing...
+1: Wrong Answer :^)
 expected YES for input 8 not NO
 ```
