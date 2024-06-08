@@ -86,9 +86,9 @@ The file will be written as follows:
 }
 ```
 
-### `test [testfile]` [-s, --strict] [-v, --verbose]
+### `test [testfile] [-s, --strict] [-v, --verbose]`
 
-- `[testfile]`: test file named `[testfile]` will, if not given test file named `testfile.json`.
+- `[testfile]`: test file named `[testfile]` , if not given test file named `testfile.json`.
 - `[-s, --strict]`: exit if code answered wrong or if runtime error is thrown.
 - `[-v, --verbose]` print tests & results.
 
