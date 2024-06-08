@@ -2,6 +2,7 @@
 layout: page
 title: Hakam (Problem solving judge)
 permalink: /projects/hakam/
+exclude: "true"
 ---
 
 [![Github repository](https://img.shields.io/badge/Github_repository-black?style=flat-square&logo=GitHub)](https://github.com/iahmadgad/hakam)
